@@ -29,7 +29,6 @@ const firebaseConfig = {
   appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
   measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENTID}`
 };
-console.log(firebaseConfig);
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: null,
