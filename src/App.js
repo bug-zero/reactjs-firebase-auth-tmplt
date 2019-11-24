@@ -33,7 +33,7 @@ const firebaseConfig = {
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: null,
-  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime
 };
 
 // Initialize firebase instance
