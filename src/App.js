@@ -20,14 +20,14 @@ import SignIn from "./HOC/SignIn";
 import HomePage from "./HOC/MainComponent";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5jMDKtzG4-xzQepATF62GkyDCsCwyUMw",
-  authDomain: "reactjs-firebase-auth-tmplt.firebaseapp.com",
-  databaseURL: "https://reactjs-firebase-auth-tmplt.firebaseio.com",
-  projectId: "reactjs-firebase-auth-tmplt",
-  storageBucket: "reactjs-firebase-auth-tmplt.appspot.com",
-  messagingSenderId: "224449628817",
-  appId: "1:224449628817:web:dd735d2b744a8d09a18d30",
-  measurementId: "G-3HFR5FMZ21"
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}.firebaseapp.com`,
+  databaseURL: `https://${process.env.REACT_APP_FIREBASE_PROJECT_ID}.firebaseio.com`,
+  projectId: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}.appspot.com`,
+  messagingSenderId: `${process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
+  measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENTID}`
 };
 
 // react-redux-firebase config
