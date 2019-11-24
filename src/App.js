@@ -20,14 +20,14 @@ import SignIn from "./HOC/SignIn";
 import HomePage from "./HOC/MainComponent";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  apiKey: "AIzaSyA5jMDKtzG4-xzQepATF62GkyDCsCwyUMw",
+  authDomain: "reactjs-firebase-auth-tmplt.firebaseapp.com",
+  databaseURL: "https://reactjs-firebase-auth-tmplt.firebaseio.com",
   projectId: "reactjs-firebase-auth-tmplt",
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID
+  storageBucket: "reactjs-firebase-auth-tmplt.appspot.com",
+  messagingSenderId: "224449628817",
+  appId: "1:224449628817:web:dd735d2b744a8d09a18d30",
+  measurementId: "G-3HFR5FMZ21"
 };
 
 // react-redux-firebase config
