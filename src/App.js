@@ -20,7 +20,7 @@ import SignIn from "./HOC/SignIn";
 import HomePage from "./HOC/MainComponent";
 
 const firebaseConfig = {
-  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}.firebaseapp.com`,
   databaseURL: `https://${process.env.REACT_APP_FIREBASE_PROJECT_ID}.firebaseio.com`,
   projectId: `${process.env.REACT_APP_FIREBASE_PROJECT_ID}`,
@@ -29,7 +29,7 @@ const firebaseConfig = {
   appId: `${process.env.REACT_APP_FIREBASE_APP_ID}`,
   measurementId: `${process.env.REACT_APP_FIREBASE_MEASUREMENTID}`
 };
-
+console.log(firebaseConfig);
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: null,
