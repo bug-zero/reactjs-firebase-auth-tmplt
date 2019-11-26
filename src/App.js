@@ -16,8 +16,15 @@ import {
   getFirestore
 } from "redux-firestore";
 import thunk from "redux-thunk";
-import SignIn from "./HOC/SignIn";
-import HomePage from "./HOC/MainComponent";
+import SignIn from "./HOC/Login";
+import Dashboard from "./HOC/Dashboard";
+import Header from "./HOC/Header";
+import Footer from "./HOC/Footer";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
+import { UserIsNotAuthenticated } from "./HOC/auth";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -32,7 +39,8 @@ const firebaseConfig = {
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: null,
-  useFirestoreForProfile: true // Firestore for Profile instead of Realtime
+  useFirestoreForProfile: true, // Firestore for Profile instead of Realtime
+  attachAuthIsReady: true
 };
 
 // Initialize firebase instance
@@ -40,6 +48,8 @@ firebase.initializeApp(firebaseConfig);
 
 // Initialize other services on firebase instance
 firebase.firestore(); // <- needed if using firestore
+
+export const firebaseAuth = firebase.auth();
 
 // Add firebase to reducers
 const rootReducer = combineReducers({
@@ -70,8 +80,10 @@ function App() {
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
         <Router>
-          <Route exact path={"/"} component={HomePage} />
-          <Route path={"/signin"} component={SignIn} />
+          <Header />
+          <Route exact path={"/"} component={Dashboard} />
+          <Route path={"/signin"} component={UserIsNotAuthenticated(SignIn)} />
+          <Footer />
         </Router>
       </ReactReduxFirebaseProvider>
     </Provider>
