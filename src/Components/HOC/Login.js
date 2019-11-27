@@ -4,8 +4,8 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { withFirebase } from "react-redux-firebase";
 import { withRouter } from "react-router-dom";
-import Alert from "./Alert";
-import { firebaseAuth } from "../App";
+import Alert from "../Helpers/Alert";
+import { firebaseAuth } from "../../Store/Config";
 
 class Login extends Component {
   state = {

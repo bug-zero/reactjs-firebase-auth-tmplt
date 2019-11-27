@@ -1,7 +1,7 @@
 import locationHelperBuilder from "redux-auth-wrapper/history4/locationHelper";
 import { connectedRouterRedirect } from "redux-auth-wrapper/history4/redirect";
 // import createHistory from 'history/createBrowserHistory';
-import LoadingScreen from "../helpers/Spinner";
+import LoadingScreen from "./Spinner";
 
 const locationHelper = locationHelperBuilder({});
 // const history = createHistory()
